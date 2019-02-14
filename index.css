@@ -1,6 +1,33 @@
 p {
-  color: purple;
+  color: black;
   font: ariel;
   font-size: 12;
-  text-align: center;
+}
+header {
+  display: block;
+  background-color: red;
+}
+header h1 {
+  padding: 0px;
+  margin: 0px;
+}
+header img {
+  width: 100%;
+}
+main {
+  display: block;
+  background-color: orange;
+  float: left;
+  width: 70%;
+}
+aside {
+  display: block;
+  background-color: yellow;
+  float: right;
+  width: 30%;
+}
+footer {
+  display: block;
+  background-color: green;
+  clear: both;
 }
