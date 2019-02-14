@@ -1,3 +1,3 @@
 # hello-world
 
-This is from Hannah.
+This is from _Bear_ and *Hannah*.
