@@ -9,13 +9,16 @@ function myFunction() {
 }
 
 function pictureAppear() {
-  var image = document.getElementById('katie');
+  var image1 = document.getElementById('katie');
+  var image2 = document.getElementById('evan');
   var button = document.getElementById('disappear');
-  if (image.style.display == 'none') {
+  if (image1.style.display == 'none') {
     button.innerText = 'Disappear';
-    image.style.display = 'block';
+    image1.style.display = 'block';
+    image2.style.display = 'none';
   } else {
     button.innerText = 'Appear';
-    image.style.display = 'none';
+    image1.style.display = 'none';
+    image2.style.display = 'block';
   }
 }
