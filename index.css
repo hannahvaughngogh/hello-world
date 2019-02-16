@@ -1,3 +1,8 @@
+body {
+  display: block;
+  margin: 0;
+}
+
 p {
   color: black;
   font: ariel;
@@ -12,8 +17,9 @@ header h1 {
   padding: 0px;
   margin: 0px;
 }
-header img {
+#katie {
   width: 100%;
+  display: block;
 }
 main {
   display: block;
@@ -31,6 +37,9 @@ footer {
   display: block;
   background-color: green;
   clear: both;
+}
+footer p {
+  margin: 0;
 }
 
 #logo-div {
