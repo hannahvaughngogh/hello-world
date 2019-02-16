@@ -50,6 +50,30 @@ aside {
   float: right;
   width: 30%;
 }
+@media only screen and (max-width: 600px) {
+  .topnav a:not(.active) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  main, aside {
+    float: left;
+    width: 100%;
+  }
+}
 footer {
   display: block;
   background-color: green;
@@ -74,6 +98,7 @@ footer p {
 nav {
   display: block;
   background-color: white;
+  overflow: hidden;
 }
 
 nav a {
@@ -86,6 +111,13 @@ nav a {
   border-style: outset;
   border-color: purple;
   text-decoration: none;
+}
+.active {
+  background-color: green;
+}
+
+.topnav .icon {
+  display: none;
 }
 
 nav a:link, nav a:visited {
