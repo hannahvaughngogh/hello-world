@@ -6,6 +6,7 @@ p {
 header {
   display: block;
   background-color: red;
+  clear: both;
 }
 header h1 {
   padding: 0px;
@@ -32,9 +33,33 @@ footer {
   clear: both;
 }
 
+#logo-div {
+  width: 100%;
+  display: block;
+
+}
+
+#logo {
+  display: block;
+  width: 200px;
+  margin: auto;
+}
+
 nav {
   display: block;
   background-color: white;
+}
+
+nav a {
+  display: block;
+  float: left;
+  padding: 20px;
+  background-color: yellow;
+  margin: 0 10px 0 0;
+  border-width: thick;
+  border-style: outset;
+  border-color: purple;
+  text-decoration: none;
 }
 
 nav a:link, nav a:visited {
@@ -43,4 +68,13 @@ nav a:link, nav a:visited {
 
 nav a:active, nav a:hover {
   color: black;
+}
+
+nav a:hover {
+  border-style: ridge;
+  background-color: green;
+}
+
+nav a:active {
+  border-style: inset;
 }
