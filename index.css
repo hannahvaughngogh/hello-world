@@ -31,3 +31,16 @@ footer {
   background-color: green;
   clear: both;
 }
+
+nav {
+  display: block;
+  background-color: white;
+}
+
+nav a:link, nav a:visited {
+  color: grey;
+}
+
+nav a:active, nav a:hover {
+  color: black;
+}
