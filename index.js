@@ -22,6 +22,7 @@ function pictureAppear() {
     image2.style.display = 'block';
   }
 }
+
 function navBarFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -30,3 +31,20 @@ function navBarFunction() {
     x.className = "topnav";
   }
 }
+
+function targetListen() {
+  var targetLink = document.getElementById('target-link');
+  targetLink.addEventListener('click', (clickedElement)=> {
+    var x = targetLink.getAttribute("href");
+    console.log(x);
+    var target = document.querySelector(x);
+    var scrollSettings = {
+      behavior: 'smooth',
+      block: 'start',
+    };
+    target.scrollIntoView(scrollSettings);
+    clickedElement.preventDefault();
+  });
+}
+// document.onLoad = targetListen;
+window.onload = targetListen;
