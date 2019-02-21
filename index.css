@@ -43,13 +43,38 @@ main {
   background-color: orange;
   float: left;
   width: 70%;
+  height: 300px;
+  overflow: scroll;
+  /* flex: 1;
+  flex-basis: 30%; */
+}
+main p, h1 {
+  padding: 10px;
+}
+.test {
+  font-weight: bold;
+}
+.test2 {
+  text-decoration: line-through;
+}
+#star {
+  fill: lime;
+  stroke: purple;
+  stroke-width: 5;
+  fill-rule: evenodd;
 }
 aside {
   display: block;
   background-color: yellow;
   float: right;
   width: 30%;
+  height: 300px;
+  /* flex: 1; */
 }
+/* #flexbox {
+  display: flex;
+  width: 100%;
+} */
 @media only screen and (max-width: 600px) {
   .topnav a:not(.active) {
     display: none;
@@ -78,11 +103,26 @@ footer {
   display: block;
   background-color: green;
   clear: both;
+  text-align: center;
 }
 footer p {
   margin: 0;
 }
-
+details summary::-webkit-details-marker {
+  background: url(/images/logo.png) center no-repeat;
+  color: transparent;
+  /* display: none; */
+}
+summary:after {
+  background-image: url("/images/logo.png");
+  float: left;
+  height: 20px;
+  width: 20px;
+  content: " ";
+}
+details[open] summary:after {
+  background: url("/images/logo.png");
+}
 #logo-div {
   width: 100%;
   display: block;
