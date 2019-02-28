@@ -3,6 +3,7 @@
 <head>
   <title>Hello World</title>
   <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="index.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="images/logo.png">
 </head>
@@ -15,9 +16,37 @@
   <nav>
     <a href="index.html">HOME</a>
     <a href="about.html">ABOUT</a>
-    <a href="nature.html">NATURE</a>
+    <a href="nature.html" class="active">NATURE</a>
     <a href="architecture.html">ARCHITECTURE</a>
     <a href="people.html">PEOPLE</a>
     <a href="contact.html">CONTACT</a>
   </nav>
+
+<p>Select a color below</p>
+
+<select id="color">
+  <option value="blue">Blue</option>
+  <option value="red">Red</option>
+  <option value="yellow">Yellow</option>
+  <option value="mocha-tan">Mocha Tan</option>
+</select>
+
+<button onclick="colorButton()">Submit</button>
+
+<p id="content"></p>
+
+<p>First Date Locations</p>
+
+<input id="dates" list="locations" name="location">
+<datalist id="locations">
+  <option value="movie">Movie<option>
+  <option value="dinner">Dinner<option>
+  <option value="coffee">Coffee<option>
+  <option value="bowling">Bowling<option>
+</datalist>
+<button onclick="dateLocation()">Submit</button>
+
+<div id="location-content"></div>
+
 </body>
+</html>

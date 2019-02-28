@@ -176,3 +176,11 @@ nav a:hover {
 nav a:active {
   border-style: inset;
 }
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: lightblue;
+}
