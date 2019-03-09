@@ -7,7 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="images/logo.png">
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
 
+
+function getCoordinates() {
+  let address = $("#address-input").val();
+  let apiKey = $('#api-key').val();
+
+  let url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address + '&key=' + apiKey;
+  console.log(url);
+  let encodedUrl = encodeURI(url);
+  console.log(encodedUrl);
+
+  $.ajax({
+    type: 'POST',
+    url: encodedUrl,
+    success: function(result) {
+      console.log(JSON.stringify(result));
+      console.log(result);
+      $("#lat").html(result.results[0].geometry.location.lat);
+      $("#long").html(result.results[0].geometry.location.lng);
+    }
+  });
+}
+
+
+</script>
 <body>
   <div id="logo-div">
     <img src="images/logo.png" id="logo">
@@ -20,4 +46,13 @@
     <a href="people.html">PEOPLE</a>
     <a href="contact.html">CONTACT</a>
   </nav>
+
+  <p id="chris">hello</p>
+
+  <input id="api-key">
+  <input id="address-input">
+  <button onclick="getCoordinates()">Button</button>
+  
+  <p id="lat"></p>
+  <p id="long"></p>
 </body>
